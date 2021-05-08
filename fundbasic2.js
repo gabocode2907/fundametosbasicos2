@@ -74,7 +74,7 @@
 // var arr=[1,2,1,2,2,2,1,1,1,2,2,2];
 // var imp=0;
 // var par=0;
-// function parImpar(){
+// function parImpar(arreglo){
 //     for(var i = 0; i < arr.length; i++){
 //         if(arr[i]%2 != 0){
 //             imp +=1;
@@ -92,7 +92,7 @@
 //         }
 //     }
 // }
-// parImpar();
+// parImpar(arr);
 
 // //7
 // var arr=[1,2,3,4,5,6,7];
@@ -107,4 +107,43 @@
 // }
 // segundos();
 
-//8
+// //8
+// var arr=["Hola","Como","Estas","Tu"];
+// function longitudesPrevias(){
+//     for(var i = arr.length-1; i > 0; i--){
+//     arr[i] = arr[i-1].length;
+//     }
+//     return arr;
+// }
+// console.log(longitudesPrevias());
+
+// //9
+// var arr=[1,1,1,1,1,1,1];
+// var newarr=[];
+// function agregaSiete(arreglo){
+//     for(var i = 0; i < arr.length; i++)
+//     {
+//         newarr.push(arr[i]+7);
+//     }
+//     return newarr;
+// }
+// console.log(agregaSiete(arr));
+
+//10
+var arr=[1,2,3,4,5,6];
+var temp=0;
+function invertir(){
+    for(var i = 0; i <arr.length ; i++){
+        if(i!=0){
+        temp = arr[i];
+        arr[i] = arr[arr.length-i-1];
+        arr[arr.length-i-1] = temp;
+        }else{
+            temp = arr[i];
+            arr [i] = arr[arr.length-1];
+            arr[arr.length-1] = temp;
+        }
+    }
+    return arr;
+}
+console.log(invertir());
