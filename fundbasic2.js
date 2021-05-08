@@ -134,18 +134,16 @@ var arr=[1,2,3,4,5,6];
 var len=arr.length-1;
 var temp=0;
 function invertir(arreglo){
-    for(var i = 0; i < arr.length ; i++){
-        if(i>0){
-        temp = arr[i];
-        arr[i] = arr[len-i];
-        arr[len-i] = temp;
-        if(i==arr.length/2){
-            i = arr.length;
-        }
-        }else{
+    for(var i = 0; i < arr.length/2 ; i++){
+        if(i==0){
             temp = arr[i];
             arr [i] = arr[arr.length-1];
             arr[arr.length-1] = temp;
+        }
+        else{
+            temp = arr[i];
+            arr[i] = arr[len-i];
+            arr[len-i] = temp;
         }
     }
     return arr;
